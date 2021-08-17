@@ -1,25 +1,22 @@
 import { useHistory } from "react-router-dom";
 import Form from "../../../Components/Form";
 
-export default function Signup() {
+export default function Login() {
+  console.log("login");
   const history = useHistory();
 
   const onSubmit = (data) => {
     window.alert(data);
   };
-
   const inputs = [
-    ["Name", "text"],
-    ["Username", "text"],
+    ["Username", "username"],
     ["Password", "password"],
-    ["Confirm Password", "password"],
   ];
-  
   return (
     <div>
-      <h1>Sign Up</h1>
+      <h1>Log in</h1>
       <Form onSubmit={onSubmit} inputs={inputs} />
-      <button onClick={() => history.push("/login")}>Log in</button>
+      <button onClick={() => history.push("/form/signup")}>Signup</button>
     </div>
   );
 }
