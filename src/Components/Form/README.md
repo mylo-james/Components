@@ -14,6 +14,8 @@
     ```
 
     - Each input will create...
+      - A key for the input
+      - A label for the input
       - A slice of state in the Form component, that will\
         be passed to the onSubmit as a stringified object.
       - placeholders matching the label

@@ -3,7 +3,7 @@ export default function Inputs({ data, setData, inputs }) {
     <>
       {inputs.map(([label, type], i, _arr, lower = label.toLowerCase()) => (
         <div key={`form1-input${i}`}>
-          <label htmlFor={lower}>{`${label || "Input Label"}: `}</label>
+          <label htmlFor={lower}>{`${label}: `}</label>
           <input
             id={lower}
             placeholder={lower}
