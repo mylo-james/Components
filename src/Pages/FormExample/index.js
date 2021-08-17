@@ -1,17 +1,16 @@
-import { Route, Switch, useRouteMatch } from "react-router-dom";
-import Login from "./Login/Login";
-import Signup from "./Signup/Signup";
-export default function Form() {
-  console.log("form");
-  const match = useRouteMatch();
+import FormExample from "./FormExample";
+import styled from "styled-components";
+const FormExampleSty = styled.div`
+  justify-self: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+`;
+
+export default function FormIndex() {
   return (
-    <Switch>
-      <Route path={`${match.url}/signup`}>
-        <Signup />
-      </Route>
-      <Route path={`${match.url}/login`}>
-        <Login />
-      </Route>
-    </Switch>
+    <FormExampleSty>
+      <FormExample />
+    </FormExampleSty>
   );
 }

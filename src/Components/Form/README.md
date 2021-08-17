@@ -25,6 +25,8 @@
   - Pass an onSubmit function as the prop `onSubmit` to the `Form` component\
     and it will run the function when the user submits
 
+  - Added an option to render additional children to Form if needed such as additional buttons
+
 ## Example
 
 - An example of how simple the form can look can be found [here](../../Pages/FormExample/Login/Login.js)

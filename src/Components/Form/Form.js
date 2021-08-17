@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Inputs from "./Inputs";
 
-export default function Form({ onSubmit, inputs }) {
+export default function Form({ onSubmit, inputs, labels = true, children }) {
   let [data, setData] = useState(
     inputs.reduce((obj, [label]) => {
       obj[label.toLowerCase()] = "";
@@ -16,8 +16,9 @@ export default function Form({ onSubmit, inputs }) {
         onSubmit(JSON.stringify(data));
       }}
     >
-      <Inputs data={data} setData={setData} inputs={inputs} />
+      <Inputs data={data} setData={setData} labels={labels} inputs={inputs} />
       <button type="submit">Submit</button>
+      {children}
     </form>
   );
 }
