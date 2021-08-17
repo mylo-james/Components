@@ -13,4 +13,4 @@ designed. I can easily edit my own Components as needed!
 
 - [Form]
 
-[Form]: ./src/Components/Form/README.md
+[Form]: ./src/Components/Form/
